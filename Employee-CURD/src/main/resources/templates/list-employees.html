@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container employee-directory-container">
+    <h3>Employee Directory</h3>
+    <hr>
+    <a th:href="@{/employees/showformforadd}" class="btn">Add Employee</a>
+<table>
+    <thead>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee:${employees}">
+        <td th:text="${employee.firstName}"></td>
+        <td th:text="${employee.lastName}"></td>
+        <td th:text="${employee.email}"></td>
+        <td>
+        <a th:href="@{/employees/showformforupdate(employeeId=${employee.id})}" class="update-btn">Update</a>
+        <a th:href="@{/employees/delete(employeeId=${employee.id})}"
+           class="delete-btn"
+           onclick="return confirm('Are you sure you want to delete this employee?');">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
