@@ -27,4 +27,6 @@ The database consists of a single `Employee` table with the following fields:
 - `last_name`: Last name of the employee.
 - `email`: Contact email.
 
+## LinkedIn Post
 
+Check out the LinkedIn post for more details and discussion about this project: [LinkedIn Post Link](https://www.linkedin.com/posts/amr-elsebaey_hello-everyone-im-excited-to-share-that-activity-7249853333031563264-Yyj-?utm_source=share&utm_medium=member_android).
